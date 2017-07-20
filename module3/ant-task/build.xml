@@ -1,0 +1,37 @@
+<project name="Project" default="compile">
+
+    <property name="dir.build" value="../build"/>
+
+    <property name="dir.classes" value="${dir.build}/classes"/>
+
+    <property name="dir.src.java" value="../src/java"/>
+
+    <property name="dir.lib" value="../lib"/>
+
+    <path id="libs.gson">
+        <fileset dir="${dir.lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="libs.main.module">
+        <path refid="libs.gson"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${dir.build}"/>
+    </target>
+
+    <target name="mkdirs">
+        <mkdir dir="${dir.classes}"/>
+    </target>
+
+    <target name="compile" depends="mkdirs">
+        <javac srcdir="${dir.src.java}" destdir="${dir.classes}">
+            <classpath>
+                <path refid="libs.main.module"/>
+            </classpath>
+        </javac>
+    </target>
+
+</project>
