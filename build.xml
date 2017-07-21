@@ -9,6 +9,8 @@
     <property name="dir.src.java" value="${dir}/src/java"/>
 
     <property name="dir.lib" value="${dir}/lib"/>
+	
+	<property name="dir.test" value="${dir}/test"/>
 
     <path id="libs.gson">
         <fileset dir="${dir.lib}">
@@ -42,6 +44,19 @@
         <jar file="${dir.build}/task.jar">
 		    <fileset dir="${dir.classes}"/>
 		</jar>
+    </target>
+	
+	<target name="junit" depends="jar">
+        <junit printsummary="yes">
+            <classpath>
+                <path refid="classpath"/>
+                <path refid="application"/>
+            </classpath>
+            
+            <batchtest fork="yes">
+                <fileset dir="${dir.test}" includes="*Test.java"/>
+            </batchtest>
+        </junit>
     </target>
 
 </project>
