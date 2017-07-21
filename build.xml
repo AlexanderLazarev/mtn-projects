@@ -46,7 +46,7 @@
 		</jar>
     </target>
 	
-	<target name="jtest" depends="jar">
+	<target name="jtest">
 		<junit printsummary="on" showoutput="on">
 			<test name="com.test.UnitTest"/>
 			<classpath>
