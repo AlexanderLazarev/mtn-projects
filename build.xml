@@ -1,12 +1,14 @@
 <project name="Project" default="compile">
 
-    <property name="dir.build" value="../build"/>
+	<property name="dir" value="./module3/ant-task/build"/>
+	
+    <property name="dir.build" value=".${dir}/build"/>
 
     <property name="dir.classes" value="${dir.build}/classes"/>
 
-    <property name="dir.src.java" value="../src/java"/>
+    <property name="dir.src.java" value="${dir}/src/java"/>
 
-    <property name="dir.lib" value="../lib"/>
+    <property name="dir.lib" value="${dir}/lib"/>
 
     <path id="libs.gson">
         <fileset dir="${dir.lib}">
