@@ -26,6 +26,7 @@
 
     <target name="mkdirs">
         <mkdir dir="${dir.classes}"/>
+		<mkdir dir="${dir.src.java}"/>
     </target>
 
     <target name="compile" depends="mkdirs">
@@ -34,6 +35,12 @@
                 <path refid="libs.main.module"/>
             </classpath>
         </javac>
+    </target>
+	
+	<target name="jar">
+        <jar file="${dir.build}/task.jar"/>
+		    <fileset dir="${dir.classes}"/>
+		</jar>
     </target>
 
 </project>
