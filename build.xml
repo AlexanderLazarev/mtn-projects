@@ -46,17 +46,14 @@
 		</jar>
     </target>
 	
-	<target name="test" depends="jar">
-        <junit printsummary="yes">
-            <classpath>
-                <path refid="classpath"/>
-                <path refid="application"/>
-            </classpath>
-            
-            <batchtest fork="yes">
-                <fileset dir="${dir.test}" includes="*Test.java"/>
-            </batchtest>
-        </junit>
-    </target>
+	<target name="jtest" depends="jar">
+		<junit printsummary="on" showoutput="on">
+			<test name="com.test.UnitTest"/>
+			<classpath>
+				<pathelement location="${dir,libs}/junit-4.11.jar"/>
+				<pathelement location="${dir.classes}"/>
+			</classpath>
+		</junit>
+	</target>
 
 </project>
