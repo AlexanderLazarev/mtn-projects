@@ -50,7 +50,7 @@
 		<junit printsummary="on" showoutput="on">
 			<test name="com.test.UnitTest"/>
 			<classpath>
-				<pathelement location="${dir.libs}/junit-4.11.jar"/>
+				<pathelement location="${dir.libs}/junit*.jar"/>
 				<pathelement location="${dir.classes}"/>
 			</classpath>
 		</junit>
