@@ -38,7 +38,7 @@
     </target>
 	
 	<target name="jar">
-        <jar file="${dir.build}/task.jar"/>
+        <jar file="${dir.build}/task.jar">
 		    <fileset dir="${dir.classes}"/>
 		</jar>
     </target>
