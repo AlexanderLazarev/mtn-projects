@@ -1,6 +1,6 @@
 <project name="Project" default="compile">
 
-	<property name="dir" value="./module3/ant-task/build"/>
+	<property name="dir" value="./module3/ant-task"/>
 	
     <property name="dir.build" value=".${dir}/build"/>
 
