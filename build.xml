@@ -2,7 +2,7 @@
 
 	<property name="dir" value="./module3/ant-task"/>
 	
-    <property name="dir.build" value=".${dir}/build"/>
+    <property name="dir.build" value="${dir}/build"/>
 
     <property name="dir.classes" value="${dir.build}/classes"/>
 
