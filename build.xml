@@ -51,6 +51,7 @@
 			<test name="com.test.UnitTest"/>
 			<classpath>
 				<pathelement location="${dir.libs}"/>
+				<pathelement location="${dir.test}"/>
 				<pathelement location="${dir.classes}"/>
 			</classpath>
 		</junit>
