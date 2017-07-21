@@ -24,7 +24,7 @@
         <delete dir="${dir.build}"/>
     </target>
 
-    <target name="mkdirs">
+    <target name="mkdirs" depends="clean">
 		<mkdir dir="${dir.build}"/>
         <mkdir dir="${dir.classes}"/>
         <mkdir dir="${dir.src.java}"/>
@@ -38,7 +38,7 @@
         </javac>
     </target>
 	
-	<target name="jar">
+	<target name="jar" depends="compile">
         <jar file="${dir.build}/task.jar">
 		    <fileset dir="${dir.classes}"/>
 		</jar>
