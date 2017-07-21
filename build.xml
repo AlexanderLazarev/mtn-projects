@@ -25,6 +25,7 @@
     </target>
 
     <target name="mkdirs">
+		<mkdir dir="${dir.build}"/>
         <mkdir dir="${dir.classes}"/>
 		<mkdir dir="${dir.src.java}"/>
     </target>
