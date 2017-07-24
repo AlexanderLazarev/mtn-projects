@@ -8,6 +8,19 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>maven-task</name>
+	<dependencies>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>Test</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons.collections</groupId>
+            <artifactId>Predicate</artifactId>
+            <version>${version}</version>
+            <scope>compile</scope>
+    </dependencies>
 	<build>
         <outputDirectory>module3/maven-task</outputDirectory>
         <finalName>MavenTask</finalName>
