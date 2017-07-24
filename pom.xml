@@ -18,6 +18,7 @@
         <dependency>
             <groupId>org.commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
+            <version>3.0</version>
             <scope>compile</scope>
 		</dependency>
     </dependencies>
