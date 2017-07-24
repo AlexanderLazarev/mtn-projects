@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <name>maven-task</name>
 	<build>
-        <outputDirectory>target2</outputDirectory>
-        <finalName>ROOT</finalName>
+        <outputDirectory>module3/maven-task/target/classes</outputDirectory>
+        <finalName>MavenTask</finalName>
         <sourceDirectory>module3/maven-task/src/main/java</sourceDirectory>
 		<resources>
             <resource>
