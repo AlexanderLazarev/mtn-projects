@@ -10,8 +10,8 @@
     <name>maven-task</name>
 	<dependencies>
         <dependency>
-            <groupId>org.junit.Test</groupId>
-            <artifactId>Test</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <version>4.4</version>
             <scope>test</scope>
         </dependency>
@@ -23,7 +23,7 @@
 		</dependency>
     </dependencies>
 	<build>
-        <outputDirectory>module3/maven-task</outputDirectory>
+        <outputDirectory>module3/maven-task/target</outputDirectory>
         <finalName>MavenTask</finalName>
         <sourceDirectory>module3/maven-task/src/main/java</sourceDirectory>
 		<resources>
