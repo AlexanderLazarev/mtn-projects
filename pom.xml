@@ -16,7 +16,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.commons.collections.Predicate</groupId>
+            <groupId>org.apache.commons.collections/groupId>
             <artifactId>Predicate</artifactId>
             <version>${version}</version>
             <scope>compile</scope>
