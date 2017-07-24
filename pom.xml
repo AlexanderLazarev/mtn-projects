@@ -18,7 +18,6 @@
         <dependency>
             <groupId>org.commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>${version}</version>
             <scope>compile</scope>
 		</dependency>
     </dependencies>
