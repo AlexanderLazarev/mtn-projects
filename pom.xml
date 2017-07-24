@@ -16,8 +16,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>commons.collections</groupId>
-            <artifactId>collections</artifactId>
+            <groupId>org.commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
             <version>${version}</version>
             <scope>compile</scope>
 		</dependency>
