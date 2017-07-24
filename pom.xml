@@ -8,42 +8,55 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>maven-task</name>
+	
 	<dependencies>
+	
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>3.0</version>
             <scope>compile</scope>
 		</dependency>
+		
     </dependencies>
+	
 	<build>
+	
+		<defaultGoal>clean</defaultGoal>
         <outputDirectory>/target/classes</outputDirectory>
         <finalName>MavenTask</finalName>
         <sourceDirectory>/src/main/java</sourceDirectory>
+		
 		<resources>
+		
             <resource>
                 <directory>/src/resources</directory>
                 <includes>
 					<include>./*.properties</include>
                 </includes>
             </resource>
+			
         </resources>
+		
 		<plugins>
+		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.3</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -71,6 +84,25 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <finalName>${project.version}-${maven.build.timestamp}</finalName>
+                    <descriptor>/assembly.xml</descriptor>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+			
 		</plugins>
+		
     </build>
 </project>
