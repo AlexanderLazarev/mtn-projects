@@ -23,16 +23,54 @@
 		</dependency>
     </dependencies>
 	<build>
-        <outputDirectory>module3/maven-task/target</outputDirectory>
+        <outputDirectory>/target/classes</outputDirectory>
         <finalName>MavenTask</finalName>
-        <sourceDirectory>module3/maven-task/src/main/java</sourceDirectory>
+        <sourceDirectory>/src/main/java</sourceDirectory>
 		<resources>
             <resource>
-                <directory>module3/maven-task/src/resources</directory>
+                <directory>/src/resources</directory>
                 <includes>
 					<include>./*.properties</include>
                 </includes>
             </resource>
         </resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>false</skipTests>
+					<excludes>
+						<exclude>**/*IntegrationTest.java</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>integration-test</phase>
+						<configuration>
+							<excludes>
+								<exclude>none</exclude>
+							</excludes>
+							<includes>
+								<include>**/*IntegrationTest.java</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
     </build>
 </project>
