@@ -15,7 +15,12 @@
             <version>4.4</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.commons.collections</groupId>
+            <artifactId>collections</artifactId>
+            <version>${version}</version>
+            <scope>compile</scope>
+		</dependency>
     </dependencies>
 	<build>
         <outputDirectory>module3/maven-task</outputDirectory>
