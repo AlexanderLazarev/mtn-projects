@@ -10,6 +10,9 @@ class Project {
   }
   
   public static void main(String[] args) {
+    @Notnull
+    String n;
+    n = null;
     System.out.println("Hellow MTN");
   }
 
