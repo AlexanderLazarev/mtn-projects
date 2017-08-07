@@ -53,6 +53,18 @@
         </resources>
 		
 		<plugins>
+		
+			<plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <configuration>
+                    <hostname>localhost</hostname>
+                    <port>8085</port>
+                    <username>admin</username>
+                    <password>admin123</password>
+                    <name>admin</name>
+                </configuration>
+            </plugin>
 			
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
