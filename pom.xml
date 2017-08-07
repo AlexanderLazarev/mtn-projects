@@ -62,7 +62,7 @@
                     <port>8085</port>
                     <username>admin</username>
                     <password>admin123</password>
-                    <name>admin</name>
+                    <name>MavenTask.war</name>
                 </configuration>
             </plugin>
 			
